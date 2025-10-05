@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Wrapper to invoke the installed script no matter where the package lives
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PKG_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+exec bash "$PKG_ROOT/scripts/power_pr.sh" "$@"
