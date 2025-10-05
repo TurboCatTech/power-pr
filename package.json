@@ -1,6 +1,6 @@
 {
   "name": "@turbocat/power-pr",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "One-command GitHub Pull Request creator/merger in Bash (uses gh).",
   "license": "MIT",
   "bin": {
