@@ -1,21 +1,6 @@
 #!/usr/bin/env bash
+# Wrapper to invoke the installed script no matter where the package lives
 set -euo pipefail
-
-SELF="${BASH_SOURCE[0]}"
-
-if command -v readlink >/dev/null 2>&1; then
-  SELF="$(readlink -f "$SELF")"
-else
-  while [ -L "$SELF" ]; do
-    TARGET="$(readlink "$SELF")"
-    case "$TARGET" in
-      /*) SELF="$TARGET" ;;
-      *)  SELF="$(cd "$(dirname "$SELF")" && pwd)/$TARGET" ;;
-    esac
-  done
-fi
-
-SCRIPT_DIR="$(cd "$(dirname "$SELF")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PKG_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-
 exec bash "$PKG_ROOT/scripts/power_pr.sh" "$@"
