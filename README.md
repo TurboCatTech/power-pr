@@ -55,7 +55,7 @@ npm i -D @turbocat/power-pr
 ```json
 {
   "scripts": {
-    "power-pr": "power-pr"
+    "power-pr": "./node_modules/@turbocat/power-pr/bin/power-pr"
   }
 }
 ```
