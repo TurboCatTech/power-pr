@@ -1,0 +1,17 @@
+{
+  "name": "turbocat/power-pr",
+  "description": "One-command GitHub Pull Request creator/merger in Bash (uses gh).",
+  "license": "MIT",
+  "type": "library",
+  "bin": ["bin/power-pr"],
+  "require": {
+    "php": ">=7.2"
+  },
+  "homepage": "https://github.com/TurboCatTech/power-pr",
+  "support": {
+    "issues": "https://github.com/TurboCatTech/power-pr/issues"
+  },
+  "authors": [
+    { "name": "Razvan Gheorghe", "role": "Developer" }
+  ]
+}

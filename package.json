@@ -1,0 +1,27 @@
+{
+  "name": "@turbocat/power-pr",
+  "version": "1.0.0",
+  "description": "One-command GitHub Pull Request creator/merger in Bash (uses gh).",
+  "license": "MIT",
+  "bin": {
+    "power-pr": "bin/power-pr"
+  },
+  "files": [
+    "bin/",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TurboCatTech/power-pr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TurboCatTech/power-pr/issues"
+  },
+  "homepage": "https://github.com/TurboCatTech/power-pr#readme",
+  "keywords": ["github", "cli", "pull-request", "automation", "bash", "gh"],
+  "scripts": {
+    "postinstall": "chmod +x bin/power-pr scripts/power_pr.sh || true"
+  }
+}
